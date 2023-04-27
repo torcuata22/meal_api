@@ -1,0 +1,18 @@
+{% extends 'meal_app/base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container text-center">
+    <br>
+    <h2 class="text-center">What would you like to eat?</h2>
+    <br>
+    <form method="GET">
+        {% csrf_token %}
+        <input class="text-center" type="text" placeholder="Search">
+        <button type="submit" class="btn btn-danger btn-sm">Search</button>
+    </form>
+</div>
+
+
+
+{% endblock %}
