@@ -37,9 +37,13 @@ def get_meals(request):
 
     return render(request, 'meal_app/meal.html', {'all_meals':all_meals})
 
-def meal_detail(request):
-    pass
-
+def meal_detail(request, id):
+    meal=Meal.objects.get(id = id)
+    return render(
+        request,
+        'meal_app/meal_detail.html',
+        {'meal':  meal}
+    )
 
 
 #pip install requests (to build url that will connect to api)

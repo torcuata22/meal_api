@@ -1,0 +1,23 @@
+{% extends 'meal_app/base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container text-center">
+    
+<div class="row">
+    <div class="col-md-5">
+        <br>
+        <img src="{{ meal.image_url }}" alt="" class="img-fluid my-4 rounded" style="width: 90%;">
+        <br><br>
+        <h3 class="class-title text-center">{{ meal.name }}</h3>
+    </div>
+    
+    <div class="col-md-7 shadow-lg p-3 my-5 bg-white rounded">
+        <h1 class="my-3">Dish Description</h1>
+        <p class="lead">{{ meal.instructions }}</p>
+    </div>
+    
+                    
+                   
+
+{% endblock %}
